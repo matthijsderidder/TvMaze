@@ -64,7 +64,7 @@ namespace TvMaze.Web.Services
 
                 while (!cancellationToken.IsCancellationRequested)
                 {
-                    var shows = (await client.Search.ShowSearchAsync("girls")).Select(x => x.Show).ToList();
+                    var shows = (await client.Search.ShowSearchAsync("the")).Select(x => x.Show).ToList();
                     foreach (var show in shows)
                     {
                         _logger.LogDebug($"Show: {show}");
